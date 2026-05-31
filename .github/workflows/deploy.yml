@@ -1,4 +1,4 @@
-: Deploy to Netlify
+name: Deploy to Netlify
 
 on:
   push:
@@ -34,9 +34,3 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-EOF
-
-# Add, commit, and push
-git add .github/workflows/deploy.yml
-git commit -m "Add Netlify deployment workflow"
-git push origin main
